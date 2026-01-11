@@ -1,0 +1,337 @@
+@import '../../styles/variables';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.18), rgba(13, 17, 23, 0.6));
+    border: 1px solid $border-color;
+    border-radius: $radius-lg;
+    padding: 24px 28px;
+    box-shadow: $shadow-card;
+}
+
+.hero h2 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.hero p {
+    margin: 0;
+    color: $text-secondary;
+}
+
+.newsLayout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+    gap: 24px;
+}
+
+.newsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.newsSection {
+    background: $bg-secondary;
+    border-radius: $radius-lg;
+    padding: 20px;
+    box-shadow: $shadow-card;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.sectionHeader h3 {
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.sectionHeader p {
+    margin: 0;
+    color: $text-secondary;
+    font-size: 14px;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba($primary-blue, 0.4);
+    background: rgba($primary-blue, 0.14);
+    color: $blue-light;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.state {
+    padding: 16px;
+    border-radius: $radius-md;
+    background: rgba(255, 255, 255, 0.04);
+    color: $text-secondary;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 14px;
+    padding: 12px;
+    border-radius: $radius-md;
+    border: 1px solid $border-color;
+    background: rgba(255, 255, 255, 0.02);
+    text-decoration: none;
+    color: inherit;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+    &:hover {
+        border-color: rgba($primary-blue, 0.5);
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-1px);
+    }
+}
+
+.card img {
+    width: 100%;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid $border-color;
+}
+
+.cardImagePlaceholder {
+    width: 100%;
+    height: 78px;
+    border-radius: 12px;
+    border: 1px solid $border-color;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(48, 54, 61, 0.6));
+}
+
+.cardBody h4 {
+    margin: 6px 0 8px;
+    font-size: 15px;
+}
+
+.cardBody p {
+    margin: 0;
+    color: $text-secondary;
+    font-size: 13px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cardMeta {
+    display: flex;
+    gap: 12px;
+    color: $text-muted;
+    font-size: 12px;
+}
+
+.companyNews {
+    background: $bg-secondary;
+    border-radius: $radius-lg;
+    padding: 20px;
+    box-shadow: $shadow-card;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.liveStream {
+    background: $bg-secondary;
+    border-radius: $radius-lg;
+    padding: 20px;
+    box-shadow: $shadow-card;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.liveStreamHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.liveStreamHeader h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.liveStreamHeader p {
+    margin: 0;
+    color: $text-secondary;
+    font-size: 13px;
+}
+
+.liveStreamPlayer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: $radius-md;
+    overflow: hidden;
+    border: 1px solid $border-color;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.liveStreamPlayer iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.liveStreamPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: $text-secondary;
+    font-size: 13px;
+    text-align: center;
+    padding: 16px;
+    background: radial-gradient(circle at top, rgba(0, 102, 255, 0.15), rgba(13, 17, 23, 0.5));
+}
+
+.liveStreamActions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.liveStreamButton {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba($primary-blue, 0.5);
+    background: rgba($primary-blue, 0.16);
+    color: $blue-light;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        border-color: rgba($primary-blue, 0.7);
+        background: rgba($primary-blue, 0.24);
+    }
+}
+
+.companyNewsHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.companyNewsHeader h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.companyNewsHeader p {
+    margin: 0;
+    color: $text-secondary;
+    font-size: 13px;
+}
+
+.companyNewsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.companyNewsItem {
+    border: 1px solid $border-color;
+    border-radius: $radius-md;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.02);
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+
+    &:hover {
+        border-color: rgba($primary-blue, 0.5);
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-1px);
+    }
+}
+
+.companyNewsMeta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $text-muted;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.companyNewsSymbol {
+    padding: 2px 6px;
+    border-radius: 999px;
+    border: 1px solid $border-color;
+    background: rgba(255, 255, 255, 0.04);
+    color: $text-secondary;
+    font-weight: 600;
+}
+
+.companyNewsHeadline {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: $text-primary;
+}
+
+@media (max-width: 1200px) {
+    .newsLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .newsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .card img,
+    .cardImagePlaceholder {
+        height: 140px;
+    }
+}

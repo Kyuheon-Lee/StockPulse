@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 32px 0 16px;
+}
+
+.likesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .likesGrid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}

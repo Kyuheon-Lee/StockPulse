@@ -1,0 +1,227 @@
+@import '../../styles/variables';
+
+.dashboard {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.up {
+    color: $green-up;
+}
+
+.down {
+    color: $red-down;
+}
+
+
+.rightColumn {
+    background: $bg-secondary;
+    border-radius: $radius-lg;
+    padding: 24px;
+    box-shadow: $shadow-card;
+}
+
+.rightColumn h3 {
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+.detailsGrid {
+    display: grid;
+    gap: 14px;
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detailItem span {
+    color: $text-secondary;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.detailItem strong,
+.detailItem a {
+    color: $text-primary;
+    font-size: 15px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.detailItem a {
+    text-decoration: none;
+}
+
+.detailItem a:hover {
+    color: $blue-light;
+}
+
+.emptyState {
+    margin-top: 40px;
+    text-align: center;
+    color: $text-secondary;
+}
+
+.emptyState h2 {
+    color: $text-primary;
+    margin-bottom: 8px;
+}
+
+.tradeCard {
+    background: $bg-secondary;
+    padding: 24px;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-card;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tradeHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.tradeHeader h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.tradeHeader p {
+    margin: 0;
+    color: $text-secondary;
+    font-size: 14px;
+}
+
+.fillButton {
+    border: 1px solid $border-color;
+    background: rgba(255, 255, 255, 0.04);
+    color: $text-secondary;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.fillButton:hover {
+    color: $text-primary;
+    border-color: rgba($primary-blue, 0.5);
+    background: rgba($primary-blue, 0.12);
+}
+
+.tradeForm {
+    display: grid;
+    gap: 12px;
+}
+
+.tradeField {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    color: $text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.tradeField input {
+    border: 1px solid $border-color;
+    background: $bg-primary;
+    border-radius: 12px;
+    padding: 10px 12px;
+    color: $text-primary;
+    font-size: 14px;
+}
+
+.tradeActions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.buyButton,
+.sellButton {
+    border: none;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.buyButton {
+    background: rgba($green-up, 0.16);
+    color: $green-up;
+}
+
+.sellButton {
+    background: rgba($red-down, 0.16);
+    color: $red-down;
+}
+
+.buyButton:hover,
+.sellButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tradeError {
+    background: rgba($red-down, 0.12);
+    border: 1px solid rgba($red-down, 0.4);
+    color: $red-down;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.positionSummary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    border-top: 1px solid $border-color;
+    padding-top: 12px;
+}
+
+.positionSummary span {
+    color: $text-secondary;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.positionSummary strong {
+    display: block;
+    margin-top: 4px;
+    font-size: 15px;
+}
+
+.neutral {
+    color: $text-secondary;
+}
+
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}

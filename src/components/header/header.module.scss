@@ -1,0 +1,86 @@
+@import '../../styles/variables';
+
+.header {
+    margin-bottom: 32px;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.brandRow h1 {
+    margin: 0;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: $shadow-card;
+}
+
+.searchBarWrapper {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.indicesCarousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.indexCard {
+    min-width: 160px;
+    background: $bg-secondary;
+    padding: 16px;
+    border-radius: $radius-md;
+    text-align: left;
+}
+
+.label {
+    font-size: 14px;
+    color: $text-secondary;
+}
+
+.value {
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin: 8px 0;
+}
+
+.change {
+    font-size: 14px;
+}
+
+.up {
+    color: $green-up;
+}
+
+.down {
+    color: $red-down;
+}
+
+@media (min-width: 768px) {
+    .headerTop {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

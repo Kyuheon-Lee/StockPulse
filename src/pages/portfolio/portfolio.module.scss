@@ -1,0 +1,224 @@
+@import '../../styles/variables';
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.hero h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.hero p {
+    margin: 0;
+    color: $text-secondary;
+}
+
+.summaryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.summaryCard {
+    background: $bg-secondary;
+    border-radius: $radius-lg;
+    padding: 18px 20px;
+    box-shadow: $shadow-card;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summaryCard span {
+    color: $text-secondary;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.summaryCard strong {
+    font-size: 22px;
+}
+
+.summaryCard em {
+    font-style: normal;
+    font-size: 13px;
+    color: $text-secondary;
+}
+
+.table {
+    background: $bg-secondary;
+    border-radius: $radius-lg;
+    padding: 12px;
+    box-shadow: $shadow-card;
+    display: grid;
+    gap: 8px;
+}
+
+.tableHeader,
+.row {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr 1fr 1.2fr 1.2fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.tableHeader {
+    padding: 12px 16px;
+    color: $text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 11px;
+}
+
+.row {
+    background: $bg-primary;
+    border-radius: 14px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.row:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.row:focus-visible {
+    outline: 2px solid rgba($primary-blue, 0.6);
+    outline-offset: 2px;
+}
+
+.row strong {
+    font-size: 15px;
+}
+
+.row span {
+    color: $text-secondary;
+}
+
+.row em {
+    display: block;
+    font-style: normal;
+    font-size: 12px;
+    color: $text-secondary;
+}
+
+.pnlValue {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.history {
+    background: $bg-secondary;
+    border-radius: $radius-lg;
+    padding: 20px;
+    box-shadow: $shadow-card;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.history h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.historyList {
+    display: grid;
+    gap: 12px;
+}
+
+.historyItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $bg-primary;
+    border-radius: 14px;
+    padding: 12px 16px;
+}
+
+.historyItem div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.historyItem span {
+    color: $text-secondary;
+    font-size: 13px;
+}
+
+.historyItem em {
+    font-style: normal;
+    font-size: 12px;
+    color: $text-secondary;
+}
+
+.emptyState {
+    background: $bg-secondary;
+    border-radius: $radius-lg;
+    padding: 24px;
+    text-align: center;
+    color: $text-secondary;
+    box-shadow: $shadow-card;
+}
+
+.up {
+    color: $green-up;
+}
+
+.down {
+    color: $red-down;
+}
+
+.up em,
+.down em {
+    color: inherit;
+}
+
+.row span.pnlValue.up {
+    color: $green-up;
+}
+
+.row span.pnlValue.down {
+    color: $red-down;
+}
+
+.row span.pnlValue.neutral {
+    color: $text-secondary;
+}
+
+.neutral {
+    color: $text-secondary;
+}
+
+@media (max-width: 900px) {
+    .tableHeader {
+        display: none;
+    }
+
+    .row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 12px;
+    }
+
+    .row strong {
+        grid-column: 1 / -1;
+    }
+
+    .historyItem {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
