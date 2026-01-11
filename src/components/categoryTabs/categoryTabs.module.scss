@@ -1,4 +1,4 @@
-@import '../../styles/variables'; // 전역 변수 사용
+@use '../../styles/variables' as *; // 전역 변수 사용
 
 .tabs {
     display: flex;
