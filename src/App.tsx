@@ -1,15 +1,15 @@
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import ApiKeyNotice from './components/apiKeyNotice/apiKeyNotice';
-import { useFinnhubToken } from './hooks/useFinnhubToken';
 import Header from './components/header/header';
 import type { TabKey } from './types/tabs';
 import styles from './App.module.scss';
+import { useSettingsStore } from './stores/settingsStore';
 
 function App() {
     const navigate = useNavigate();
     const location = useLocation();
     const activeTab = getActiveTab(location.pathname);
-    const token = useFinnhubToken();
+    const token = useSettingsStore((state) => state.finnhubApiKey);
     const isSettings = location.pathname === '/settings';
 
     const handleTabChange = (tab: TabKey) => {
