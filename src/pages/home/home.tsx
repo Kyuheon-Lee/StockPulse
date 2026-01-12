@@ -1,13 +1,8 @@
 import { useCompanyNews } from '../../hooks/useCompanyNews';
 import { useMarketNews } from '../../hooks/useMarketNews';
-import { useYouTubeLiveStatus } from '../../hooks/useYouTubeLiveStatus';
 import { useStockStore } from '../../stores/stockStore';
 import NewsSection from '../../components/newsSection/NewsSection';
 import styles from './home.module.scss';
-
-const FUTURES_NOW_CHANNEL_ID = 'UC_JJ_NhRqPKcIOj5Ko3W_3w';
-const FUTURES_NOW_CHANNEL_URL = 'https://www.youtube.com/@futuresnow';
-const FUTURES_NOW_LIVE_EMBED_BASE = 'https://www.youtube.com/embed';
 
 function HomePage() {
     const generalNews = useMarketNews('general');
@@ -92,33 +87,27 @@ function HomePage() {
 export default HomePage;
 
 function LiveStreamCard() {
-    const liveStatus = useYouTubeLiveStatus(FUTURES_NOW_CHANNEL_ID);
-    const liveVideoId = liveStatus.videoId;
-    const embedUrl = liveVideoId
-        ? `${FUTURES_NOW_LIVE_EMBED_BASE}/${liveVideoId}?autoplay=1&mute=1&playsinline=1`
-        : '';
+    const FUTURES_NOW_CHANNEL_ID = 'UC_JJ_NhRqPKcIOj5Ko3W_3w';
+    const FUTURES_NOW_CHANNEL_URL = 'https://www.youtube.com/@futuresnow';
+    const FUTURES_NOW_LIVE_EMBED_BASE =
+        'https://www.youtube.com/embed/live_stream';
+    const embedUrl = `${FUTURES_NOW_LIVE_EMBED_BASE}?channel=${FUTURES_NOW_CHANNEL_ID}&autoplay=1&mute=1&playsinline=1`;
     return (
         <section className={styles.liveStream}>
             <div className={styles.liveStreamHeader}>
                 <div>
-                    <h3>오선 라이브</h3>
+                    <h3> 오선의 미국 증시 라이브 </h3>
                     <p>채널이 라이브가 되면 자동 재생됩니다.</p>
                 </div>
             </div>
             <div className={styles.liveStreamPlayer}>
-                {liveStatus.isLive && liveVideoId ? (
-                    <iframe
-                        title="오선 라이브 스트림"
-                        src={embedUrl}
-                        allow="autoplay; encrypted-media; picture-in-picture"
-                        allowFullScreen
-                        loading="lazy"
-                    />
-                ) : (
-                    <div className={styles.liveStreamPlaceholder}>
-                        <span>현재 라이브 스트림이 오프라인입니다.</span>
-                    </div>
-                )}
+                <iframe
+                    title="오선 라이브 스트림"
+                    src={embedUrl}
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                />
             </div>
             <div className={styles.liveStreamActions}>
                 <a
