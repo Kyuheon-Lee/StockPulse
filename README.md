@@ -26,14 +26,9 @@
 ## 주식 매수 & 나의 주식 예시
 https://github.com/user-attachments/assets/b11fa09d-9bc7-47c0-8014-aedda3fe2854
 ## 주식 검색
-https://github.com/user-attachments/assets/493275e1-2989-4a7a-87a4-a086315a7d7f
+https://github.com/user-attachments/assets/a520e7a7-a3a9-4360-aca7-a22e34c52c9c
 ## 뉴스 보기
 https://github.com/user-attachments/assets/d7199247-ad13-48eb-8134-e039ea36082e
-
-
-
-
-
 
 
 
