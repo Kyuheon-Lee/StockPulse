@@ -3,7 +3,6 @@
 미국 주식 데이터를 기반으로 관심 종목, 포트폴리오, 대시보드를 한 곳에서 확인하는 투자 시뮬레이션 UI입니다. Finnhub API를 사용하며, 사용자가 자신의 API 키를 설정해 데이터를 조회하도록 설계되어 있습니다.
 
 <img width="1192" height="867" alt="Screenshot 2026-01-11 at 6 31 56 PM" src="https://github.com/user-attachments/assets/3a64ad32-2e52-48ca-b00a-00ab64401a58" />
-
 ## 주요 기능
 
 - 시장 뉴스
@@ -23,6 +22,20 @@
 - 설정
     - Finnhub API 키 등록/삭제
     - 키는 브라우저 저장소에 영속 저장
+
+## 주식 매수 & 나의 주식 예시
+https://github.com/user-attachments/assets/b11fa09d-9bc7-47c0-8014-aedda3fe2854
+## 주식 검색
+https://github.com/user-attachments/assets/493275e1-2989-4a7a-87a4-a086315a7d7f
+## 뉴스 보기
+https://github.com/user-attachments/assets/d7199247-ad13-48eb-8134-e039ea36082e
+
+
+
+
+
+
+
 
 ## 화면/플로우
 
